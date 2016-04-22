@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Kq4-3g-scr">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Lct-1m-ssX">
+            <objects>
+                <navigationController id="Kq4-3g-scr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ALk-AI-feg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qiC-w4-FmH" kind="relationship" relationship="rootViewController" id="6oG-KN-R2P"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N6l-9t-Z9N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-286.93333333333334" y="500.78666666666663"/>
+        </scene>
+        <!--Rankings-->
+        <scene sceneID="G1O-gA-IjM">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="qiC-w4-FmH" customClass="RankingsViewController" customModule="FossFrost" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lFe-o2-kNy"/>
+                        <viewControllerLayoutGuide type="bottom" id="bDF-0Q-0ZY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j43-hc-pdo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z4B-2N-2li">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="65w-2C-4tZ" userLabel="Header View">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Frost logo white" translatesAutoresizingMaskIntoConstraints="NO" id="jSg-JH-x0A">
+                                            <rect key="frame" x="6" y="0.0" width="309" height="112"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="jSg-JH-x0A" secondAttribute="height" multiplier="309:112" id="uoQ-fr-odq"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.36862745099999999" green="0.62352941179999999" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="jSg-JH-x0A" firstAttribute="centerY" secondItem="65w-2C-4tZ" secondAttribute="centerY" id="4jX-G9-VXv"/>
+                                        <constraint firstItem="jSg-JH-x0A" firstAttribute="centerX" secondItem="65w-2C-4tZ" secondAttribute="centerX" id="aYe-aS-0rJ"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RankingTableViewCell" rowHeight="58" id="riy-sg-2tL" customClass="RankingTableViewCell" customModule="FossFrost" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="140" width="320" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="riy-sg-2tL" id="xzb-dW-XHh">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="57.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Sergii" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRX-m6-PFE">
+                                                    <rect key="frame" x="8" y="16" width="285" height="25.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06Y-MT-0Iq">
+                                                    <rect key="frame" x="301" y="20" width="11" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SRX-m6-PFE" firstAttribute="top" secondItem="xzb-dW-XHh" secondAttribute="top" constant="16" id="9pt-jJ-Mmq"/>
+                                                <constraint firstAttribute="trailing" secondItem="06Y-MT-0Iq" secondAttribute="trailing" constant="8" id="BBi-V5-X6S"/>
+                                                <constraint firstAttribute="bottom" secondItem="SRX-m6-PFE" secondAttribute="bottom" constant="16" id="HUT-sb-bsN"/>
+                                                <constraint firstItem="06Y-MT-0Iq" firstAttribute="leading" secondItem="SRX-m6-PFE" secondAttribute="trailing" constant="8" id="O6g-k5-gSI"/>
+                                                <constraint firstItem="SRX-m6-PFE" firstAttribute="leading" secondItem="xzb-dW-XHh" secondAttribute="leading" constant="8" id="acp-Kw-JP1"/>
+                                                <constraint firstItem="06Y-MT-0Iq" firstAttribute="baseline" secondItem="SRX-m6-PFE" secondAttribute="baseline" id="wZ5-Jk-1lu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.36862745099999999" green="0.62352941179999999" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="playerName" destination="SRX-m6-PFE" id="1rc-Fa-uTX"/>
+                                            <outlet property="playerPoints" destination="06Y-MT-0Iq" id="WGX-l5-z77"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="qiC-w4-FmH" id="FiJ-xG-faa"/>
+                                    <outlet property="delegate" destination="qiC-w4-FmH" id="mXD-b6-q7Y"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bDF-0Q-0ZY" firstAttribute="top" secondItem="Z4B-2N-2li" secondAttribute="bottom" id="FLf-RS-Go8"/>
+                            <constraint firstItem="Z4B-2N-2li" firstAttribute="leading" secondItem="j43-hc-pdo" secondAttribute="leading" id="RQ0-QL-GHF"/>
+                            <constraint firstAttribute="trailing" secondItem="Z4B-2N-2li" secondAttribute="trailing" id="aon-7e-44i"/>
+                            <constraint firstItem="Z4B-2N-2li" firstAttribute="top" secondItem="lFe-o2-kNy" secondAttribute="bottom" id="grG-qz-nfP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rankings" id="Fvj-vp-b4f"/>
+                    <connections>
+                        <outlet property="rankingsTableView" destination="Z4B-2N-2li" id="nks-z2-frJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mps-ss-YID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="500"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Frost logo white" width="309" height="112"/>
+    </resources>
+    <color key="tintColor" red="0.28235294117647058" green="0.59215686274509804" blue="0.77647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+</document>
