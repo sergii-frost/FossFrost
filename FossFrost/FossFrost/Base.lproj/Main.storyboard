@@ -34,9 +34,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z4B-2N-2li">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="36" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Z4B-2N-2li">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.36862745099999999" green="0.62352941179999999" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="65w-2C-4tZ" userLabel="Header View">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="112"/>
@@ -56,8 +56,43 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RankingHeader" rowHeight="36" id="bRl-4W-0lz" userLabel="Section header" customClass="RankingTableViewCell" customModule="FossFrost" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="148" width="320" height="36"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bRl-4W-0lz" id="qTZ-HA-oOO">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="35.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Player" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXx-b6-EVX" userLabel="Name">
+                                                    <rect key="frame" x="8" y="8" width="249.5" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Points" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9U-6X-d2k">
+                                                    <rect key="frame" x="265" y="9" width="46.5" height="18"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="s9U-6X-d2k" firstAttribute="baseline" secondItem="tXx-b6-EVX" secondAttribute="baseline" id="Ud2-ts-hV2"/>
+                                                <constraint firstItem="tXx-b6-EVX" firstAttribute="top" secondItem="qTZ-HA-oOO" secondAttribute="top" constant="8" id="Zkx-jN-0j3"/>
+                                                <constraint firstItem="tXx-b6-EVX" firstAttribute="leading" secondItem="qTZ-HA-oOO" secondAttribute="leading" constant="8" id="aih-XG-jIT"/>
+                                                <constraint firstAttribute="bottom" secondItem="tXx-b6-EVX" secondAttribute="bottom" constant="8" id="cPb-79-Aq1"/>
+                                                <constraint firstAttribute="trailing" secondItem="s9U-6X-d2k" secondAttribute="trailing" constant="8" id="gKU-IV-Qac"/>
+                                                <constraint firstItem="s9U-6X-d2k" firstAttribute="leading" secondItem="tXx-b6-EVX" secondAttribute="trailing" constant="8" id="sny-sS-mXZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.36862745099999999" green="0.62352941179999999" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="playerName" destination="tXx-b6-EVX" id="4wh-FF-gsx"/>
+                                            <outlet property="playerPoints" destination="s9U-6X-d2k" id="gBe-Zq-KDD"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RankingTableViewCell" rowHeight="58" id="riy-sg-2tL" customClass="RankingTableViewCell" customModule="FossFrost" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="140" width="320" height="58"/>
+                                        <rect key="frame" x="0.0" y="184" width="320" height="58"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="riy-sg-2tL" id="xzb-dW-XHh">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="57.5"/>
@@ -98,7 +133,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.36862745099999999" green="0.62352941179999999" blue="0.7843137255" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="bDF-0Q-0ZY" firstAttribute="top" secondItem="Z4B-2N-2li" secondAttribute="bottom" id="FLf-RS-Go8"/>
                             <constraint firstItem="Z4B-2N-2li" firstAttribute="leading" secondItem="j43-hc-pdo" secondAttribute="leading" id="RQ0-QL-GHF"/>

@@ -9,13 +9,18 @@
 import UIKit
 import Foundation
 
+
 class RankingsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    let kHeaderCellIdentifier = "RankingHeader"
+    
     @IBOutlet weak var rankingsTableView: UITableView!
     let dataSource: RankingDataSource = RankingDataSource.init()
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(RankingsViewController.handleRefresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl.tintColor = UIColor.whiteColor()
         
         return refreshControl
     }()
@@ -30,6 +35,10 @@ class RankingsViewController: UIViewController, UITableViewDelegate, UITableView
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        return tableView.dequeueReusableCellWithIdentifier(kHeaderCellIdentifier)!
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
